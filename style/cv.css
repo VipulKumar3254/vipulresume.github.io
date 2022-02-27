@@ -1,0 +1,53 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+
+}
+/* code for logo file */
+#leftnav img{
+    height: 8vh;
+    width: 5vw;
+    border:2px solid green;
+    border-radius: 150px;
+    padding: 5px;
+
+}
+#leftnav {
+    display:flex;
+    flex-grow:.1;
+    justify-content:center;
+    align-items:center;
+}
+#navbar{
+    display:flex;
+    width:100vw;
+    justify-content: space-between;
+    background-color:greenyellow;
+    font-size:1rem;
+}
+#middle{
+    display:flex;
+    list-style:none;
+     justify-content: space-between;
+     flex-grow:.3;
+
+}
+
+/* styling body1 contents: */
+
+
+#body1
+{
+    display:flex;
+    justify-content: space-between;
+    background-color: yellow;
+}
+#body2{
+    background-color:rosybrown;
+}
+
+#body2{
+    display: flex;
+
+}

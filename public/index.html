@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO WEBSITE OF VIPUL KUMAR</title>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="leftnav">
+        <img src="../src/logo.png" alt="logo" />
+      </div>
+      <div id="middle">
+        <li>home</li>
+        <li>About Us</li>
+        <li>Blogs</li>
+        <li>Contact Us</li>
+      </div>
+      <div id="right">
+        <input type="text" name="search" id="search" placeholder="Search" />
+        <button>&#128270;</button>
+      </div>
+      <div onclick="hamburger(this);" class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+
+      <section id="hidden">
+        <li>Home</li>
+        <li>About</li>
+        <li>blogs</li>
+        <li>Contact Us</li>
+
+        <h6 id="closer" onclick="closer(this);"  >&#10060;</h6>
+
+            
+      </section>
+    </nav>
+
+    <section id="part-1">
+      <div id="main-part1">
+        <div class="resumeImg">
+          <div>
+
+            <img src="/src/resumePhoto2.png" alt="resume icon" />
+          </div>
+          <div class="buttons">
+            <a id="btn1" href="cv.html">View CV</a>
+            <a id="btn2" href="cv.html">Download CV</a>
+          </div>
+        </div>
+        <div id="mainIntro">
+          <p>
+            Looking for a challenging role in a reputable organization to
+            utilize my technical, database, and management skills for the growth
+            of the organization as well as to enhance my knowledge about new and
+            emerging trends in the IT sector.
+          </p>
+          <p id="mainIntro2">
+            Desirous of an IT Service Management role in a challenging workplace
+            that welcomes innovative ideas and offers growth opportunities and
+            positive environment for accomplishing projects. Hold BCA in
+            Computer Science from DCRUST university
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p>&copy;All rights reserved.</p>
+    </section>
+
+    <script src="../js/index.js"></script>
+  </body>
+</html>

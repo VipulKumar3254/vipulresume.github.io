@@ -1,0 +1,272 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+/* code for logo file */
+#leftnav img{
+    height: 8vh;
+    width: 5vw;
+    border:2px solid green;
+    border-radius: 5rem;
+    padding: 5px;
+
+}
+#leftnav {
+    display:flex;
+    flex-grow:.1;
+    justify-content:center;
+    align-items:center;
+}
+#navbar{
+    display:flex;
+    width:100vw;
+    justify-content: space-between;
+    background-color:greenyellow;
+    font-size:1rem;
+}
+#middle{
+    display:flex;
+    list-style:none;
+     justify-content: space-between;
+     flex-grow:.2;
+     border:2px solid black;
+     border-radius:1rem; 
+     align-items:center;
+     height:fit-content;
+    margin:auto;
+    padding:.5rem;
+}
+
+#right{
+    display:flex;
+    align-items:center;
+}
+#right input,button {
+    font-size:1.3rem;
+
+
+}
+#right button {
+    margin: 0 2rem 0 .2rem;
+    border-radius:.4rem
+
+
+}
+#right input {
+    width: 12rem;
+    border:2px solid blue;
+    border-radius:.4rem
+}
+
+/* styling body1 contents: */
+
+
+#body1
+{
+    display:flex;
+    justify-content: space-between;
+    background-color: yellow;
+}
+#body2{
+    background-color:rosybrown;
+}
+
+#body2{
+    display: flex;
+
+}
+
+#part-1{
+    height:100vh;
+    /* overflow: hidden; */
+    background-color:pink;
+    width:100vw;
+}
+#part-1 .resumeImg{
+    padding:1rem 0 0 0;
+}
+#part-1 div  img
+{
+    
+    height: 59vh;
+    width:58vw;
+    margin:auto;
+}
+/*  code for centralizing photo and text of body part 1 */
+#main-part1{
+    display:flex;
+
+}
+#mainIntro{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+
+}
+.buttons {
+    display:flex;
+    justify-content:center;
+}
+.buttons a
+{
+    margin:0 .5rem 0 0 ;
+    padding: .2rem;
+    color: rgb(65, 9, 9);
+    background-color:pink;
+    border:2px solid black;
+    border-radius: .5rem;
+}
+ a::hover{
+    color: black;
+}
+
+
+
+.footer{
+    text-align:center;
+    height: 5vh;
+    line-height:5vh;
+    background-color:greenyellow;
+    width: 100vw;
+
+}
+
+a{
+    text-decoration:none;
+}
+
+
+
+/* code for media queries */
+
+
+.burger div
+{
+    background-color:black;
+    height: 2px;
+    width:20px;
+    margin:3px;
+}
+
+/* code for menu of the hamburger */
+
+#hidden{
+    height:108.1vh;
+    width:40vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:rgba(143, 240, 17, 0.966);
+    display:none;
+}
+
+#hidden h6{
+    position:fixed;
+    bottom:30px;
+    right:89px;
+
+}
+
+.burger {
+    display:none;
+}
+
+
+@media screen and  (min-width: 768px) ,( max-width:1114px)
+{
+
+    #leftnav img{
+        height:41px;
+        width:60px;
+    }
+    .burger{
+        display:none;
+    }
+    #mainIntro2{
+        display:none;
+    }
+    .burger{
+        display:none;
+    }
+}
+
+@media screen and(min-width: 550px), (max-width:767px)
+{
+    #navbar{
+        font-size:1.2rem;
+        font-weight: bold;
+    }
+
+   #right #search{
+        width:85px;
+    }
+    #right button{
+        margin:0 .5rem 0 .3rem;
+    }
+    a,footer{
+        font-weight: bold;
+    }
+}
+
+
+
+@media screen and(min-width: 290px), ( max-width:549px )
+{
+    #right #search,button {
+        display:none;
+    } 
+    /* .buttons #btn1{
+        position:absolute;
+        top:500px;
+        left:78px;
+    } */
+
+    #leftnav  {
+        flex-grow: 2;
+    }
+    #main-part1{
+        flex-direction: column;
+    }
+    .resumeImg{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .resumeImg img{
+        width:60%;
+        margin:auto;
+        height:40vh;
+        width:45vw;
+        /* border:2px solid black; */
+    }
+
+   
+    #part-1{
+        height: 150vh;
+        /* margin:auto; */
+    }
+    #mainIntro{
+        width:60%;
+        margin:auto;
+    }
+
+    #middle{
+        display:none;
+    }
+    .burger{
+        display:block;
+    }
+    /* #hidden{
+        display:block;
+    } */
+}
+
+@media screen and ( min-width: 150px ),max-width:289px)
+{
+    #resumeImg img{
+        height: 20vh;
+        width:190vw;
+}
