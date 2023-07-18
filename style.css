@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:ital,wght@1,500&family=Source+Code+Pro:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Raleway:wght@600&family=Roboto:ital,wght@1,500&family=Source+Code+Pro:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:ital,wght@1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg:rgba(209, 203, 225, 0.445);
+}
+body{   
+    /* background-color: var(--bg); */
+    color:black;
+}
+.container {
+
+    display: flex;
+
+}
+
+.sidebar {
+    /* width: 378px; */
+    width: 25vw;
+
+    height: 100vh;
+    
+    border-radius: 0 78px 19px  67px ;
+    font-family: 'Raleway', sans-serif;
+
+    /* background-color: red; */
+    background-color: rgba(147, 131, 131, 0.842);
+    position:sticky;
+    top:0;
+    left:0;
+}
+
+.sidebar nav {
+    padding: 45px;
+
+}
+
+.sidebar nav li {
+    list-style: none;
+    font-size: 20px;
+    padding: 33px 0;
+
+}
+.sidebar nav li a{
+    text-decoration: none;
+    color:black;
+}
+
+.main {
+    width: 89vw;
+
+}
+
+.info {
+
+    height: 58vh;
+    width: 6vw;
+    margin: auto;
+    margin-top: 144px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.devpic img {
+    width: 20vw;
+    height: 58vh;
+}
+
+.dev-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.hello {
+    font-size: 3em;
+}
+
+.about {
+    font-size:2em ;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.moreabout {
+    margin: 12px 0;
+    font-size: 19px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.buttons button {
+    margin-top: 12px;
+    font-size: 13px;
+
+    padding: 9px;
+    color: white;
+    background-color: dodgerblue;
+    border: 0;
+    border-radius: 12px;
+    cursor:pointer;
+
+}
+.buttons button:hover{
+    background-color: white;
+    color:dodgerblue;
+    border: 1px solid dodgerblue;
+
+}
+
+/* code of contact page */
+/* ************* */
+/* ************* */
+/* ************* */
+
+
+.contactform{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+}
+.contactform h2{
+    padding-top: 121px;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    font-size: 30px;
+
+
+}
+
+
+.contactform form{
+    padding: 34px 12px ;
+    font-size: 20px;
+
+}
+.contactform form input{
+    margin: 8px;
+    width: 56rem;
+    border: 1px solid rgb(75, 67, 67);
+    border-radius: 4px;
+    height: 24px;
+    font-size:20px;
+    
+}
+.contactform form textarea{
+    width: 56rem;
+    border: 1px solid rgb(75, 67, 67);
+    border-radius: 4px;
+    font-size:20px;
+
+
+}
+
+
+
+
+ .contactform form  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.1s;
+    outline: none;
+    
+  }
+
+ .contactform form  textarea {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.1s;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+
+  }
+  
+  .contactform form  input:focus {
+    border: 3px solid rgb(168, 154, 154);
+    height:28px ;
+    font-size:21px;
+  }
+  
+  .contactform form  textarea:focus {
+    border: 3px solid rgb(168, 154, 154);
+    font-size:21px;
+  }
+
+
+
+  /* code for blogs */
+  /* ************ */
+  /* ************ */
+  /* ************ */
+
+
+
+  .blogcontainer {
+    font-family: 'Raleway', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+
+    width: 70vw;
+
+    margin: auto;
+
+  }
+  .blogHeading{
+    margin-top: 34px;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    text-align: center;
+    height: 67px;
+
+  }
+
+  .blogItem{
+    margin:12px;
+    border-radius: 6px;
+    background-color: var(--bg);
+    width: 300px;
+    word-spacing: 4px;
+    padding:8px;
+    height:auto;
+    border:2px solid gray;
+    transition: .4s;
+}
+.blogItem:hover{
+    /* height: calc(); */
+    padding-bottom: 12px;
+    background-color: rgb(233, 203, 203);;
+    width: 302px;
+    border:2px solid rgb(63, 56, 56);
+  }
+  .blogItem p{
+    font-family: 'Mulish', sans-serif;
+
+  }
+  .blogItem img{
+    height: 150px;
+  }
+
+
+  /* code for intro.html */
+  /* ************** */
+  /* ************** */
+  /* ************** */
+
+
+
+  .intro h1{
+    margin-top: 34px;
+    padding:7px;
+   font-family: 'Mulish', sans-serif;
+      text-align: center;
+
+  }
+  .intro h2{
+    margin:12px;
+   font-family: 'Mulish', sans-serif;
+
+
+
+  }
+
+  .intro p{
+    font-family: 'Mulish', sans-serif;
+
+
+  }
+  .skillContainer{
+    padding: 0 12px;
+    width: 400px;
+  }
+
+  .skillItem{
+   padding:6px;
+   display: grid;
+   grid-template-columns: 100px 200px;
+   transition: .2s;
+   font-family: 'Mulish', sans-serif;
+   font-weight: 500;
+
+  }
+  .skillItem:hover .hundred{
+    width:270px;
+  }
+  .skillItem:hover .ninty{
+    width:205px;
+  }
+  .skillItem:hover .eighty{
+    width:170px;
+  }
+  .skillItem:hover{
+    font-weight: 900;
+
+  }
+  
+  .skill{
+    width: 200px;
+    height: 8px;
+    background-color: red;
+    border-radius: 5px;
+
+  }
+  .hundred{
+    width: 265px;
+    background-color: blueviolet;
+    transition: .2s;
+  }
+  .ninty{
+    width: 200px;
+    background-color: aqua;
+    transition: .2s;
+}
+.eighty{
+    width: 165px;
+    background-color: rgb(171, 85, 137);
+    transition: .2s;
+  }
+  .project{
+    margin:12px;
+    padding:8px;
+    background-color: rgb(210, 210, 183);
+    border-radius: 8px;
+    transition: .4s;
+
+  }
+  .project:hover{
+   
+    background-color: bisque;
+    padding:13px;
+  }
+  .project{
+    font-family: 'Mulish', sans-serif;
+
+  }
+
+  .project h3{
+    font-family: 'Raleway', sans-serif;
+
+  }
+  a{
+    text-decoration: none;
+    color:white;
+    
+  }
+
+
+
+  /* space of media query */
+  /* **************** */
+  /* **************** */
+  /* **************** */
+  /* **************** */
+  /* **************** */
+  /* **************** */
+
+
+
+  @media screen and  (max-width: 901px) {
+    .dev-info{
+    width: 50vw;
+    }
+    .main
+    {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .sidebar{
+        height: 100vh;
+        width: 26vw;
+        font-size: 22px;
+    }
+    li{
+        font-size: 20px;
+    }
+    .sidebar nav{
+    }
+    .dev-info .hello{
+        font-size:30px;
+        font-weight: bold;
+    }
+    .dev-info .name{
+        font-size:37px;
+        font-weight: bold;
+    }
+    .dev-info .about{
+        font-size:20px;
+        font-weight: bold;
+    }
+    .devpic img{
+        object-fit:contain;
+        width:  150px;
+
+    }
+    .sidebar nav ul li{
+        padding:4vh 0;
+        font-size: 18px;
+        width: 99px;
+        margin:0 0;
+    }
+    .sidebar nav ul {
+        margin: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+
+  }
+
+@media screen and (max-width: 588px) {
+    
+    .sidebar{
+        width: 20vw;
+        border-radius: 0 45px 0 45px;
+        padding:0 0 ;
+     
+    }
+    .sidebar nav ul{
+        display:flex;
+        flex-direction: column;
+        align-items:flex-end;
+        margin:0 0 0 65px;
+
+    }
+
+  
+}
+
