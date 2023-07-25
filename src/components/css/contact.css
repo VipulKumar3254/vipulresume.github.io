@@ -1,0 +1,35 @@
+.contact{
+    height: fit-content;
+    position: relative;
+    top: 50%;
+    left:7%;
+    background-color: white;
+}
+.blueLine{
+    background-image: url("../../../public/blueline.png");
+    background-position: center;
+    background-size:3000px  400px;
+
+    background-repeat: no-repeat;
+}
+.relative{
+    position: relative;
+
+}
+.contactImg{
+    height: 500px; 
+}
+.input{
+    padding: 4px;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-top: 4px;
+}
+
+input,textarea{
+    width: 300px;
+}
+input,textarea:focus{
+    outline:none;
+
+}

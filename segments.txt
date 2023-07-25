@@ -1,0 +1,9 @@
+segments of url like /about/aboutme # about me is the segments
+
+parts of url are url segments .
+
+
+topics: middleware
+
+
+

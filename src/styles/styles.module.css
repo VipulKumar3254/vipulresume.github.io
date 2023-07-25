@@ -1,0 +1,18 @@
+.leageScript {
+
+    font-family: 'League Script', cursive ;
+    font-weight: 400;
+}
+
+.basis-0{
+    flex-basis: 0;
+}
+.margin{
+    left:-34px;
+}
+.link-color> a{
+    color: rgb(83, 75, 75);
+}
+.don{
+    font-stretch:expanded;
+}

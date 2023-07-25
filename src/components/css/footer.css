@@ -1,0 +1,19 @@
+.footer{
+
+    min-height: 40vh;
+    background-color: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.footer > div > h4{
+    color:rgb(55, 186, 171)
+}
+.shrink>p{
+    max-width: 270px;
+
+}
+hr{
+    height: 6px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+
+}
