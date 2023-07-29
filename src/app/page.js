@@ -13,6 +13,7 @@ import Projects from "@/components/Projects"
 import Footer from "@/components/Footer"
 import About from "@/components/About"
 import Contact from "@/components/Contact"
+import Skills from "@/components/Skills"
 const roboto = Roboto({
   weight: "100",
   subsets:["latin"]
@@ -29,6 +30,7 @@ export default function Home() {
     <MainSection/>
     <About/>
     <Projects/>
+    <Skills/>
     <Contact/>
     <Footer/>
    

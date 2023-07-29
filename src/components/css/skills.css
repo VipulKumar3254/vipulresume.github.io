@@ -1,0 +1,150 @@
+@property --progress-value {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @keyframes progress {
+   to { --progress-value: 90; }
+  }
+  
+  @keyframes progress1 {
+   to { --progress-value: 80; }
+  }
+  @keyframes progress2 {
+   to { --progress-value: 80; }
+  }
+  @keyframes progress3 {
+   to { --progress-value: 75; }
+  }
+  
+  .progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(rgb(75, 220, 215) calc(var(--progress-value) * 1%), rgb(45, 112, 119) 0);
+    animation: progress 2s 1 forwards;
+  }
+  
+  .progress-bar::before {
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: progress 2s 1 forwards;
+  }
+  
+  #color1::before {
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: progress1 2s 1 forwards;
+  }
+  #color2::before {
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: progress2 2s 1 forwards;
+  }
+  #color3::before {
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: progress3 2s 1 forwards;
+  }
+
+  
+
+
+  /* color code for the progress bar  */
+
+  #color1{
+    background: 
+    radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(rgb(236, 114, 53) calc(var(--progress-value) * 1%), rgb(89, 20, 21) 0);
+  animation: progress1 2s 1 forwards;
+  }
+  #color2{
+    background: 
+    radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(rgb(241, 35, 193) calc(var(--progress-value) * 1%), rgb(117, 58, 109) 0);
+  animation: progress2 2s 1 forwards;
+  }
+  #color3{
+    background: 
+    radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(rgb(21, 183, 243) calc(var(--progress-value) * 1%), rgb(53, 106, 112) 0);
+  animation: progress3 2s 1 forwards;
+  }
+
+
+  /* another item css */
+  .skillItems>img{
+   
+    
+  }
+
+  .big{
+    width: 150px;
+    height: 150px;
+  }
+
+  .ultrabig{
+    width: 200px;
+    height: 200px;
+  }
+  
+
+  .next{
+    width: 300px;
+    height: 200px;
+  }
+  .shadow1{
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+  }
+
+  @media screen and (max-width:500px) {
+    .progress-bar{
+      margin-top: 12px;
+      width: 200px;
+      height: 200px;
+      box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+    }
+    .roundContainer{
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    }
+    .ultrabig{
+      width: 170px;
+      height: 170px;
+
+    }
+    
+  }
+
+
+  /* cutomized css code for lower section of skills */
+
+  .center{
+    display:grid;  
+    place-items: center;
+  }
+  .gridManager{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(150px,1fr));
+    grid-template-rows: repeat(2,minmax(150px,1fr));
+
+  }
+
+  @media screen and  (max-width:1200px)
+  {
+    .center{
+      display:block;  
+    }
+
+    .gridManager{
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr))
+    }
+  }

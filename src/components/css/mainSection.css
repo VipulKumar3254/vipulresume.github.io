@@ -1,0 +1,127 @@
+.size{
+    min-height: 90svh;
+}
+
+
+.paraColor{
+    color: rgb(39, 43, 67);
+}
+
+.fontSize{
+    font-size:12px;
+}
+
+
+/* code for para container */
+
+.paraContainer{
+    width: 25%;
+}
+
+
+@media screen and (max-width:1700px) {
+    .fontSize{
+        font-size: 20px;
+    }
+    
+}
+@media screen and (max-width:1400px) {
+    .fontSize{
+        font-size: 20px;
+    }
+   
+    
+}
+@media screen and (max-width:1200) {
+    .fontSize{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width:992px) {
+    .fontSize{
+        font-size: 16px;
+    }
+    .paraContainer{
+        width:100%;
+        text-align: center;
+    }
+}
+@media screen and (max-width:768px) {
+    .fontSize{
+        font-size: 14px;
+
+    }
+    .paraContainer{
+        width:100%;
+        text-align: center;
+    }
+    
+}
+@media screen and (max-width:576px) {
+    .fontSize{
+        font-size: 13px;
+    }
+   
+}
+@media screen and (max-width:400px) {
+    .fontSize{
+        font-size: 12px;
+    }
+    .paraContainer{
+        width:100%;
+        text-align: center;
+    }
+    
+}
+.heading{
+    font-size:1.8em;
+    color:rgb(41, 36, 36);
+    line-height: 2rem;
+    font-weight: 200;
+
+}
+.anotherHeading{
+    font-size:1.3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: rgb(150, 159, 165);
+}
+
+.myBtn{
+    border-radius: 6px;
+    background-color: rgb(65, 145, 191);
+}
+
+
+
+.hii{
+    width: 100%;
+}
+.rightPic{
+    position: relative;
+    overflow: hidden;
+    object-fit: contain;
+    background-color: white;
+
+}
+
+.rightPicContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.rightPicContainer::before{
+    position: absolute;
+
+    content: "";
+    height: 190%;
+    width: 80%;
+    background: white;
+    transform: translateY(-23%) rotate(10deg);
+    left:-64%;
+}

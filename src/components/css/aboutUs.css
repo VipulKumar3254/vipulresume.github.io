@@ -1,8 +1,23 @@
-.about {
-    min-height:40svh;
 
+
+@media  (max-width: 575.98px) { 
+    .aboutText{
+        overflow-y: hidden !important; 
+        background: #000;
+    }
 }
 
-.aboutImg{
-    height: 70vh;
-}
+@media (max-width: 767.98px) { 
+
+ }
+
+@media (max-width: 991.98px) { 
+
+ }
+
+@media (max-width: 1199.98px) { 
+
+ }
+
+@media (max-width: 1399.98px) { 
+ }
