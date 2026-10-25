@@ -1,0 +1,722 @@
+<!-- Elevated React Native Developer Portfolio for Vipul — Dedicated Pure Light Theme --><!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vipul — React Native Developer &amp; Mobile Architect</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            accent: {
+              DEFAULT: '#65a30d', // Electric Olive-Lime with accessible contrast
+              hover: '#4d7c0f',
+              dim: '#f2f8e9',
+              border: 'rgba(101, 163, 13, 0.28)',
+              highlight: '#84cc16'
+            },
+            paper: '#f7f7f5',
+            surface: {
+              DEFAULT: '#ffffff',
+              card: '#ffffff',
+              muted: '#f4f4f5',
+              subtle: '#fafafa',
+              darker: '#ecece9'
+            },
+            charcoal: {
+              DEFAULT: '#18181b',
+              muted: '#52525b',
+              faded: '#71717a',
+              border: '#e4e4e7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom Scrollbar and Selection */
+    ::selection {
+      background-color: #bef264;
+      color: #18181b;
+    }
+    
+    /* Subtle structural lines */
+    .structural-border {
+      border-color: #e4e4e7;
+    }
+
+    /* Subtle grid pattern overlay for paper texture */
+    .bg-grid-subtle {
+      background-size: 32px 32px;
+      background-image: linear-gradient(to right, rgba(24, 24, 27, 0.035) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(24, 24, 27, 0.035) 1px, transparent 1px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#f7f7f5] text-[#18181b] transition-colors duration-300 font-sans antialiased selection:bg-[#bef264] selection:text-[#18181b]">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[#f7f7f5]/90 border-b structural-border transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<!-- Wordmark -->
+<a class="group flex items-center gap-3" href="#">
+<span class="w-2.5 h-2.5 rounded-full bg-[#65a30d] group-hover:scale-125 transition-transform duration-200"></span>
+<span class="font-display font-bold tracking-tight text-lg text-[#18181b]">VIPUL</span>
+<span class="text-xs font-mono tracking-widest text-[#71717a] uppercase hidden sm:inline">/ React Native</span>
+</a>
+<!-- Desktop Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-[#52525b] hover:text-[#65a30d] transition-colors" href="#work">Work</a>
+<a class="text-sm font-medium text-[#52525b] hover:text-[#65a30d] transition-colors" href="#journey">Journey</a>
+<a class="text-sm font-medium text-[#52525b] hover:text-[#65a30d] transition-colors" href="#skills">Skills</a>
+<a class="text-sm font-medium text-[#52525b] hover:text-[#65a30d] transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- Right Controls: Status + Interactive Pill -->
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center gap-2 py-1 px-3.5 rounded-full bg-white border structural-border text-[11px] font-mono text-[#52525b] shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-[#65a30d] animate-pulse"></span>
+<span>Open for contracts &amp; rates</span>
+</div>
+<!-- Theme Status Indicator / Toggle Button -->
+<button aria-label="Light mode enabled" class="p-2.5 rounded-xl border structural-border bg-white hover:bg-zinc-50 text-[#52525b] hover:text-[#18181b] transition-all shadow-xs" title="Dedicated Light Edition">
+<svg class="w-4 h-4 text-[#65a30d]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Mobile Menu Trigger -->
+<button aria-label="Open Navigation" class="md:hidden p-2.5 rounded-xl border structural-border bg-white text-[#18181b] shadow-xs" id="menuBtn">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Mobile Nav Overlay -->
+<div class="hidden md:hidden fixed inset-0 top-20 bg-[#f7f7f5]/98 backdrop-blur-xl border-t structural-border p-8 flex flex-col justify-between z-50" id="mobileMenu">
+<div class="space-y-6 pt-6">
+<a class="block text-2xl font-display font-semibold text-[#18181b] hover:text-[#65a30d] mobile-nav-link" href="#work">Selected Work</a>
+<a class="block text-2xl font-display font-semibold text-[#18181b] hover:text-[#65a30d] mobile-nav-link" href="#journey">Developer Journey</a>
+<a class="block text-2xl font-display font-semibold text-[#18181b] hover:text-[#65a30d] mobile-nav-link" href="#skills">Skills &amp; Architecture</a>
+<a class="block text-2xl font-display font-semibold text-[#18181b] hover:text-[#65a30d] mobile-nav-link" href="#contact">Get In Touch</a>
+</div>
+<div class="pt-8 border-t structural-border flex items-center justify-between text-xs font-mono text-[#71717a]">
+<span>VIPUL — REACT NATIVE</span>
+<span>© 2025</span>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 lg:px-12 overflow-hidden bg-grid-subtle">
+<!-- 01 HERO SECTION (Asymmetric, Editorial Light Mode) -->
+<section class="pt-16 pb-24 lg:pt-24 lg:pb-36 border-b structural-border">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Column: Editorial Headline & Identity -->
+<div class="lg:col-span-7 space-y-8">
+<div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border structural-border bg-white text-xs font-mono text-[#52525b] shadow-xs">
+<span class="w-2 h-2 rounded-full bg-[#65a30d]"></span>
+<span>React Native Mobile Developer</span>
+<span class="text-[#71717a]">•</span>
+<span class="text-[#18181b] font-medium">iOS &amp; Android</span>
+</div>
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-[0.98] text-[#18181b]">
+            Building digital experiences that feel as good as they work.
+          </h1>
+<p class="text-lg text-[#52525b] max-w-xl font-normal leading-relaxed">
+            I craft high-performance, responsive React Native applications that bridge clean architecture, fluent native modules, and tactile product design.
+          </p>
+<!-- CTAs and Social Connections -->
+<div class="flex flex-wrap items-center gap-5 pt-2">
+<a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-semibold text-sm transition-all shadow-sm active:translate-y-0.5" href="#work">
+<span>View My Work</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</a>
+<!-- Social Links -->
+<div class="flex items-center gap-3">
+<a aria-label="GitHub Profile" class="p-3 rounded-xl border structural-border bg-white hover:bg-zinc-100 text-[#52525b] hover:text-[#18181b] transition-colors shadow-xs" href="https://github.com" rel="noreferrer" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a aria-label="LinkedIn Profile" class="p-3 rounded-xl border structural-border bg-white hover:bg-zinc-100 text-[#52525b] hover:text-[#18181b] transition-colors shadow-xs" href="https://linkedin.com" rel="noreferrer" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Quick Telemetry Specs Bar -->
+<div class="grid grid-cols-3 gap-6 pt-6 border-t structural-border">
+<div>
+<div class="text-xs font-mono text-[#71717a]">FRAME BUDGET</div>
+<div class="text-xl font-display font-semibold text-[#18181b] mt-0.5">60 / 120 FPS</div>
+</div>
+<div>
+<div class="text-xs font-mono text-[#71717a]">ECOSYSTEM</div>
+<div class="text-xl font-display font-semibold text-[#18181b] mt-0.5">Fabric &amp; JSI</div>
+</div>
+<div>
+<div class="text-xs font-mono text-[#71717a]">LOCATION</div>
+<div class="text-xl font-display font-semibold text-[#18181b] mt-0.5">San Francisco, CA</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Art-Directed Editorial Portrait & Floating UI Metadata -->
+<div class="lg:col-span-5 relative">
+<div class="relative mx-auto max-w-md lg:max-w-none">
+<!-- Decorative Backing Frame with Precision Corner Marks -->
+<div class="absolute -inset-2.5 rounded-3xl border border-dashed structural-border pointer-events-none"></div>
+<!-- Portrait Container with Editorial Rounded Radius on Pure White Card -->
+<div class="relative overflow-hidden rounded-2xl bg-white border structural-border shadow-xl">
+<img alt="Vipul — React Native Developer" class="w-full h-auto object-cover aspect-[4/5] filter grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1UZFMVGSt9wPMgZy5yrFiL0DvDzCPxaQoAKIsWIdcRu8P1mmL9SFkr_V_lJ7VzsOfSdgO0pcmiwidtbWwQ9RFVD27i8844vImrdoroAArIo5O7wJAjzraJuHIuweYnuezmc9gIUKZrIyLlb_gdzQl2tmacR1AuGvZXwwybSuS0mXOBWbeQOqPBAeWDdvNslwJYZ0NRS37JNXS9Xh_mwTYUQ4LrtwOptNBcm41n2PVinoatrWjA_CZh-TJE"/>
+<!-- Ambient Gradient scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent opacity-85"></div>
+<!-- Overlaid Telemetry Badge -->
+<div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md border structural-border shadow-md flex items-center justify-between">
+<div>
+<div class="text-[11px] font-mono text-[#65a30d] tracking-wider uppercase font-semibold">Engine Architecture</div>
+<div class="text-xs text-[#18181b] font-medium mt-0.5">React Native Fabric • Turbomodules</div>
+</div>
+<div class="text-right">
+<div class="text-[10px] font-mono text-[#71717a]">STABILITY</div>
+<div class="text-xs font-mono text-[#52525b] font-medium">PROD READY</div>
+</div>
+</div>
+</div>
+<!-- Floating Editorial Tag -->
+<div class="absolute -top-4 -right-4 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border structural-border shadow-md text-xs font-mono text-[#18181b]">
+<span class="w-2 h-2 rounded-full bg-[#65a30d]"></span>
+<span>2+ YRS MOBILE CRAFT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 02 DEVELOPER JOURNEY / ABOUT (Timeline Progression + Stats) -->
+<section class="py-24 lg:py-32 border-b structural-border" id="journey">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Left: Editorial Title & Story Narrative -->
+<div class="lg:col-span-5 space-y-6">
+<div class="text-xs font-mono tracking-widest text-[#65a30d] uppercase font-semibold">01 // EVOLUTION</div>
+<h2 class="text-3xl sm:text-5xl font-display font-bold tracking-tight text-[#18181b]">
+            The journey so far.
+          </h2>
+<p class="text-[#52525b] leading-relaxed">
+            From crafting foundational JavaScript web interfaces to architecting zero-stutter React Native apps that scale smoothly across iOS and Android ecosystems.
+          </p>
+<p class="text-[#52525b] leading-relaxed">
+            I specialize in bridge-less Fabric architecture, thread isolation, and creating reusable component systems that keep engineering teams moving at full speed without sacrificing fluid 60fps micro-interactions.
+          </p>
+<!-- Minimalist Stats Strip -->
+<div class="pt-8 grid grid-cols-3 gap-4 border-t structural-border">
+<div class="p-4 rounded-xl bg-white border structural-border shadow-xs">
+<div class="text-2xl lg:text-3xl font-display font-bold text-[#18181b]">2+</div>
+<div class="text-xs font-mono text-[#71717a] mt-1">Years Building</div>
+</div>
+<div class="p-4 rounded-xl bg-white border structural-border shadow-xs">
+<div class="text-2xl lg:text-3xl font-display font-bold text-[#18181b]">10+</div>
+<div class="text-xs font-mono text-[#71717a] mt-1">Shipped Apps</div>
+</div>
+<div class="p-4 rounded-xl bg-white border structural-border shadow-xs">
+<div class="text-2xl lg:text-3xl font-display font-bold text-[#65a30d]">∞</div>
+<div class="text-xs font-mono text-[#71717a] mt-1">Still Exploring</div>
+</div>
+</div>
+</div>
+<!-- Right: Stepped Interactive Timeline Progression -->
+<div class="lg:col-span-7 space-y-8 relative before:absolute before:inset-0 before:left-4 before:w-px before:bg-[#e4e4e7]">
+<!-- Step 1 -->
+<div class="relative pl-12 group">
+<div class="absolute left-2.5 top-1.5 w-3 h-3 rounded-full bg-white border-2 border-[#65a30d] group-hover:scale-125 transition-transform"></div>
+<div class="p-6 rounded-2xl bg-white border structural-border space-y-3 transition-all hover:border-[#65a30d]/50 shadow-xs hover:shadow-md">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-[#65a30d] font-semibold">PHASE 01 // FOUNDATION</span>
+<span class="text-[#71717a]">2022 — 2023</span>
+</div>
+<h3 class="text-xl font-display font-bold text-[#18181b]">
+                Modern Frontend &amp; State Orchestration
+              </h3>
+<p class="text-sm text-[#52525b] leading-relaxed">
+                Mastered reactive programming, TypeScript rigor, and predictable global state management with Redux Toolkit and React Navigation hierarchies. Designed reusable UI primitives that adhere strictly to accessible ergonomics.
+              </p>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-[11px] font-mono text-[#52525b]">TypeScript</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-[11px] font-mono text-[#52525b]">Redux Toolkit</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-[11px] font-mono text-[#52525b]">REST APIs</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative pl-12 group">
+<div class="absolute left-2.5 top-1.5 w-3 h-3 rounded-full bg-white border-2 border-[#65a30d] group-hover:scale-125 transition-transform"></div>
+<div class="p-6 rounded-2xl bg-white border structural-border space-y-3 transition-all hover:border-[#65a30d]/50 shadow-xs hover:shadow-md">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-[#65a30d] font-semibold">PHASE 02 // MOBILE ARCHITECTURE</span>
+<span class="text-[#71717a]">2023 — 2024</span>
+</div>
+<h3 class="text-xl font-display font-bold text-[#18181b]">
+                Deep Mobile Architecture &amp; Offline Systems
+              </h3>
+<p class="text-sm text-[#52525b] leading-relaxed">
+                Transitioned fully to native cross-platform development. Engineered resilient offline-first caching routines, high-frequency optimistic mutations, background notification pipelines, and granular token authorization with Axios interceptors.
+              </p>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-[11px] font-mono text-[#52525b]">React Native</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-[11px] font-mono text-[#52525b]">Offline Storage</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-[11px] font-mono text-[#52525b]">Push Notifications</span>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative pl-12 group">
+<div class="absolute left-2.5 top-1.5 w-3 h-3 rounded-full bg-[#65a30d] group-hover:scale-125 transition-transform"></div>
+<div class="p-6 rounded-2xl bg-white border structural-border space-y-3 transition-all hover:border-[#65a30d]/50 shadow-xs hover:shadow-md">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-[#65a30d] font-semibold">PHASE 03 // NATIVE INTEGRATIONS</span>
+<span class="text-[#71717a]">CURRENT</span>
+</div>
+<h3 class="text-xl font-display font-bold text-[#18181b]">
+                Fabric, Turbomodules &amp; High-Fidelity Interaction
+              </h3>
+<p class="text-sm text-[#52525b] leading-relaxed">
+                Writing custom Swift/Kotlin modules and TurboModule bridges to handle low-level device sensors, biometrics, hardware camera pipelines, and custom physics gestures rendered deterministically on UI threads.
+              </p>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-[11px] font-mono text-[#52525b]">New Architecture</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-[11px] font-mono text-[#52525b]">Native Bridges (Swift/Kotlin)</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-[11px] font-mono text-[#52525b]">Reanimated 3</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 03 SELECTED PROJECTS (Asymmetric Mini Case Studies) -->
+<section class="py-24 lg:py-32 border-b structural-border" id="work">
+<div class="space-y-4 mb-16">
+<div class="text-xs font-mono tracking-widest text-[#65a30d] uppercase font-semibold">02 // PORTFOLIO GALLERY</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<h2 class="text-3xl sm:text-5xl font-display font-bold tracking-tight text-[#18181b]">
+            Selected work.
+          </h2>
+<p class="text-sm text-[#71717a] font-mono">
+            Every build crafted for sub-millisecond touch latency &amp; production resilience.
+          </p>
+</div>
+</div>
+<!-- Project 01: Large Horizontal Showcase (Fintech Telemetry) -->
+<article class="p-8 lg:p-12 rounded-3xl bg-white border structural-border mb-16 hover:border-[#65a30d]/50 transition-all duration-300 shadow-sm hover:shadow-lg group">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Visual Preview -->
+<div class="lg:col-span-7 order-2 lg:order-1 overflow-hidden rounded-2xl bg-[#111113] border structural-border relative">
+<img alt="Aura Vault Fintech Mobile App" class="w-full h-auto object-cover transform group-hover:scale-102 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Vus_eVH50MOs733rxd9RxCHwSbkcSi1yGpW7H72T-3qLKhlI128MJWBD7b3mIHFXmbljqOtrADWRM8IYpoVypHw-5XIcoqtTBdq6ZKZmoa5tT8TUq-jXV8ILS0pJ2HuTgRaJwta5cFPCfDrbTrOoAfLUSisEtFlP085edPkG9pXUOtN-zzIqF79pYg4QJyLrDNzT9dcosnX783fZ7gVHKMh5jtjzWiYDB-TtiXE8R7HHKGCMR4afEEuQ"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border structural-border text-[11px] font-mono text-[#4d7c0f] font-semibold shadow-xs">
+              LIVE WEBSOCKET 60FPS
+            </div>
+</div>
+<!-- Content Details -->
+<div class="lg:col-span-5 order-1 lg:order-2 space-y-6">
+<div class="flex items-center justify-between text-xs font-mono text-[#71717a]">
+<span>PROJECT 01 // FINTECH</span>
+<span>2024 RELEASE</span>
+</div>
+<h3 class="text-2xl sm:text-4xl font-display font-bold text-[#18181b] group-hover:text-[#65a30d] transition-colors">
+              Aura Vault — High-Frequency Wealth Engine
+            </h3>
+<p class="text-sm sm:text-base text-[#52525b] leading-relaxed">
+              Architected a zero-latency wealth analytics client rendering real-time orderbooks and portfolio equity curves. Engineered custom native bridges to process WebSocket payloads off the JS runtime thread.
+            </p>
+<div class="grid grid-cols-2 gap-4 py-2 border-y structural-border text-xs font-mono">
+<div>
+<span class="text-[#71717a] block">ROLE</span>
+<span class="text-[#18181b] font-medium">Lead Mobile Architect</span>
+</div>
+<div>
+<span class="text-[#71717a] block">PLATFORM</span>
+<span class="text-[#18181b] font-medium">iOS &amp; Android (Production)</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">React Native 0.74</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">Redux Toolkit</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">Turbomodules</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">Biometrics</span>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[#65a30d] hover:text-[#4d7c0f] transition-colors" href="#contact">
+<span>View Architecture Specs</span>
+<svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 02: Offset Split Layout (Spatial Audio Synthesizer) -->
+<article class="p-8 lg:p-12 rounded-3xl bg-white border structural-border mb-16 hover:border-[#65a30d]/50 transition-all duration-300 shadow-sm hover:shadow-lg group">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Content Details (Left side for alternating rhythm) -->
+<div class="lg:col-span-5 space-y-6">
+<div class="flex items-center justify-between text-xs font-mono text-[#71717a]">
+<span>PROJECT 02 // CREATIVE AUDIO</span>
+<span>2024 RELEASE</span>
+</div>
+<h3 class="text-2xl sm:text-4xl font-display font-bold text-[#18181b] group-hover:text-[#65a30d] transition-colors">
+              Sonance Labs — Spatial Synthesizer &amp; LFO
+            </h3>
+<p class="text-sm sm:text-base text-[#52525b] leading-relaxed">
+              Tactile mobile DSP synthesizer featuring custom fluid physics sliders, real-time waveform visualizers, and direct haptic impulse curves tied to device CoreAudio threads.
+            </p>
+<div class="grid grid-cols-2 gap-4 py-2 border-y structural-border text-xs font-mono">
+<div>
+<span class="text-[#71717a] block">LATENCY</span>
+<span class="text-[#18181b] font-medium">&lt; 4ms Input Lag</span>
+</div>
+<div>
+<span class="text-[#71717a] block">GESTURES</span>
+<span class="text-[#18181b] font-medium">Reanimated 3 Physics</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">Expo SDK 51</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">Reanimated 3</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">Audio JSI</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">Haptics API</span>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[#65a30d] hover:text-[#4d7c0f] transition-colors" href="#contact">
+<span>Explore DSP Interaction</span>
+<svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Visual Preview -->
+<div class="lg:col-span-7 overflow-hidden rounded-2xl bg-[#111113] border structural-border relative">
+<img alt="Sonance Labs Spatial Synthesizer Mockup" class="w-full h-auto object-cover transform group-hover:scale-102 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xg_V02UaWZlCrQOhw6V03ZuAggT4PecuEUH4fCP6FnAG6R_r77UIE6Z0xKME3TEN72mg-mfo7b1iFXpmmLPx7NrHNNA4XP1ZIZu7YHTYfu5tGNSvCglOv_bDsWzqQRaPRT5-mlPVPgWfpRq4fHIvFq_mUf6-tE--sAanYv_DLGimSCOB5ofUZ2NAVWjx2-JTdA3dWPA-4BJg-mZ-Kmaw55PZUy217JDve2RFfcBI-mKCYSdBR-5ORZIg"/>
+<div class="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border structural-border text-[11px] font-mono text-[#4d7c0f] font-semibold shadow-xs">
+              DSP THREAD LINKED
+            </div>
+</div>
+</div>
+</article>
+<!-- Project 03: Wide Mobile Framework / Infrastructure Strip -->
+<article class="p-8 lg:p-10 rounded-3xl bg-white border structural-border hover:border-[#65a30d]/50 transition-all duration-300 shadow-sm hover:shadow-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+<div class="space-y-3 max-w-2xl">
+<div class="flex items-center gap-3 text-xs font-mono">
+<span class="px-2 py-0.5 rounded bg-[#f2f8e9] text-[#65a30d] font-semibold border border-[#65a30d]/30">OPEN SOURCE ENGINE</span>
+<span class="text-[#71717a]">PROJECT 03 // ARCHITECTURE</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-display font-bold text-[#18181b]">
+              Kinesis — Kinetic Component Engine for React Native
+            </h3>
+<p class="text-sm text-[#52525b] leading-relaxed">
+              A comprehensive library of physics-driven gesture containers, spring sheets, and fluid navigation primitives built on React Native Reanimated 3 and Gesture Handler. Adopted across 12+ enterprise production apps.
+            </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">NativeWind</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">GestureHandler</span>
+<span class="px-2.5 py-1 rounded bg-[#f4f4f5] text-xs font-mono text-[#52525b]">Component Kit</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-4 shrink-0">
+<div class="text-left lg:text-right font-mono">
+<div class="text-2xl font-bold text-[#18181b]">4.9★ Github</div>
+<div class="text-xs text-[#71717a]">1,400+ Production Stars</div>
+</div>
+<a class="px-5 py-2.5 rounded-xl border structural-border bg-[#f4f4f5] hover:bg-zinc-200 text-xs font-mono font-medium text-[#18181b] transition-all flex items-center gap-2 shadow-xs" href="https://github.com" rel="noreferrer" target="_blank">
+<span>View Source Code</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</section>
+<!-- 04 SKILLS & TECHNOLOGIES (Modern Editorial Skill Map) -->
+<section class="py-24 lg:py-32 border-b structural-border" id="skills">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Left: Category Philosophy -->
+<div class="lg:col-span-5 space-y-6">
+<div class="text-xs font-mono tracking-widest text-[#65a30d] uppercase font-semibold">03 // STACK &amp; CAPABILITIES</div>
+<h2 class="text-3xl sm:text-5xl font-display font-bold tracking-tight text-[#18181b]">
+            Tools I build with.
+          </h2>
+<p class="text-[#52525b] leading-relaxed">
+            I treat mobile applications as mission-critical systems. Every dependency is vetted for bundle weight, memory containment, and native rendering throughput.
+          </p>
+<!-- Dynamic Capability Inspection Box -->
+<div class="p-6 rounded-2xl bg-white border structural-border space-y-2 shadow-sm">
+<div class="flex items-center justify-between text-xs font-mono text-[#71717a]">
+<span>INSPECTION CONSOLE</span>
+<span class="text-[#65a30d] font-semibold animate-pulse">LIVE</span>
+</div>
+<div class="text-sm font-mono text-[#18181b] min-h-[48px] flex items-center leading-relaxed" id="skillDescription">
+              Hover over any technology chip to inspect architectural notes and implementation roles.
+            </div>
+</div>
+</div>
+<!-- Right: Categorized Interactive Skill Map -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Category 1: Mobile -->
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-[#65a30d] font-semibold">// 01 MOBILE RUNTIME</span>
+<span class="text-[#71717a]">Core Engine</span>
+</div>
+<div class="flex flex-wrap gap-2.5">
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="React Native: Full cross-platform client development leveraging Fabric new architecture and TurboModules.">
+                React Native
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="TypeScript: Strict compilation, generic typing across component props, navigation state, and backend schema.">
+                TypeScript
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="JavaScript (ESNext): Deep mastery of event loops, asynchronous promises, microtasks, and Hermes V8 optimization.">
+                JavaScript
+              </button>
+</div>
+</div>
+<!-- Category 2: State & Architecture -->
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-[#65a30d] font-semibold">// 02 STATE &amp; ARCHITECTURE</span>
+<span class="text-[#71717a]">Scalable Data Flow</span>
+</div>
+<div class="flex flex-wrap gap-2.5">
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Redux Toolkit: Slices, createAsyncThunk, listener middleware, and RTK Query normalized network caching.">
+                Redux Toolkit
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="React Navigation: Complex nested stack, bottom tab, and drawer hierarchies with deep linking configuration.">
+                React Navigation
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Atomic Components: Design system engineering with compound tokens, variants, and strict reusability.">
+                Reusable Architecture
+              </button>
+</div>
+</div>
+<!-- Category 3: Backend & APIs -->
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-[#65a30d] font-semibold">// 03 BACKEND &amp; NETWORKING</span>
+<span class="text-[#71717a]">Data Contracts</span>
+</div>
+<div class="flex flex-wrap gap-2.5">
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="REST APIs: Robust payload contracts, JSON serialization guards, and retry idempotency.">
+                REST APIs
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Axios: Automated JWT refresh interceptors, abort controllers for cancellations, and progress tracking.">
+                Axios
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Authentication: Biometric keychain access (FaceID/Fingerprint), OAuth2 PKCE, and encrypted secure storage.">
+                Authentication &amp; Security
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Push Notifications: APNs and FCM setup, background message handling, and deep link routing.">
+                Notifications (APNs/FCM)
+              </button>
+</div>
+</div>
+<!-- Category 4: Native & Bridges -->
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-[#65a30d] font-semibold">// 04 NATIVE PLATFORMS</span>
+<span class="text-[#71717a]">Hardware Integration</span>
+</div>
+<div class="flex flex-wrap gap-2.5">
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Android (Kotlin): Custom native view managers, Gradle configuration, permissions, and service workers.">
+                Android / Kotlin
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="iOS (Swift): CocoaPods &amp; SPM integration, CoreHaptics, StoreKit purchases, and native view wrappers.">
+                iOS / Swift
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Bridges &amp; JSI: Direct C++ JSI bindings and TurboModules to eliminate JSON serialization bottlenecks.">
+                Native Modules &amp; Bridges
+              </button>
+</div>
+</div>
+<!-- Category 5: Tooling & Delivery -->
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-[#65a30d] font-semibold">// 05 DEV &amp; DELIVERY TOOLS</span>
+<span class="text-[#71717a]">Continuous Quality</span>
+</div>
+<div class="flex flex-wrap gap-2.5">
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Git &amp; GitHub: Trunk-based development, semantic versioning, and automated PR review checks.">
+                Git &amp; GitHub
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Figma: Design token extraction, auto-layout translation to flexbox, and prototype micro-interactions.">
+                Figma
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Firebase: Crashlytics breadcrumbs, Remote Config rollouts, and Performance Monitoring telemetry.">
+                Firebase
+              </button>
+<button class="skill-chip px-4 py-2.5 rounded-xl bg-white border structural-border text-sm font-mono text-[#18181b] hover:border-[#65a30d] hover:text-[#65a30d] transition-all shadow-xs hover:shadow-sm" data-desc="Postman: Mock server simulation, API collection tests, and OAuth token automation.">
+                Postman
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 05 CONTACT SECTION (High-Craft Closing Statement + Dedicated Form) -->
+<section class="py-24 lg:py-32 border-b structural-border" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Left: Statement & Direct Access -->
+<div class="lg:col-span-5 space-y-6">
+<div class="text-xs font-mono tracking-widest text-[#65a30d] uppercase font-semibold">04 // INITIATION</div>
+<h2 class="text-3xl sm:text-5xl font-display font-bold tracking-tight text-[#18181b]">
+            Let's build something useful.
+          </h2>
+<p class="text-[#52525b] leading-relaxed">
+            I'm always interested in interesting products, ambitious ideas, and opportunities to build something meaningful on iOS and Android.
+          </p>
+<div class="space-y-4 pt-4 text-sm font-mono">
+<div>
+<span class="text-[#71717a] block text-xs">DIRECT INQUIRY</span>
+<a class="text-[#18181b] hover:text-[#65a30d] transition-colors font-medium underline decoration-zinc-300 underline-offset-4" href="mailto:vipul.reactnative@gmail.com">vipul.reactnative@gmail.com</a>
+</div>
+<div>
+<span class="text-[#71717a] block text-xs">AVAILABILITY</span>
+<span class="text-[#65a30d] font-semibold">Available for Select Contract Engagements</span>
+</div>
+<div>
+<span class="text-[#71717a] block text-xs">RESPONSE TIME</span>
+<span class="text-[#52525b]">&lt; 24 Business Hours</span>
+</div>
+</div>
+</div>
+<!-- Right: Premium Editorial Form -->
+<div class="lg:col-span-7">
+<form class="p-8 sm:p-10 rounded-3xl bg-white border structural-border space-y-6 shadow-sm" id="contactForm">
+<!-- Name Input -->
+<div class="space-y-2">
+<label class="block text-xs font-mono text-[#52525b]" for="name">YOUR NAME</label>
+<input class="w-full px-4 py-3.5 rounded-xl bg-[#f7f7f5] border structural-border text-[#18181b] placeholder-[#71717a] focus:outline-none focus:border-[#65a30d] focus:bg-white transition-all text-sm font-sans" id="name" placeholder="Elena Rostova / Product Lead" required="" type="text"/>
+</div>
+<!-- Email Input -->
+<div class="space-y-2">
+<label class="block text-xs font-mono text-[#52525b]" for="email">EMAIL ADDRESS</label>
+<input class="w-full px-4 py-3.5 rounded-xl bg-[#f7f7f5] border structural-border text-[#18181b] placeholder-[#71717a] focus:outline-none focus:border-[#65a30d] focus:bg-white transition-all text-sm font-sans" id="email" placeholder="elena@company.com" required="" type="email"/>
+</div>
+<!-- Message Input -->
+<div class="space-y-2">
+<label class="block text-xs font-mono text-[#52525b]" for="message">PROJECT BRIEF / TIMELINE</label>
+<textarea class="w-full px-4 py-3.5 rounded-xl bg-[#f7f7f5] border structural-border text-[#18181b] placeholder-[#71717a] focus:outline-none focus:border-[#65a30d] focus:bg-white transition-all text-sm font-sans" id="message" placeholder="Tell me about what you're building, target platforms, and timelines..." required="" rows="4"></textarea>
+</div>
+<!-- Submit CTA -->
+<button class="w-full py-4 rounded-xl bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-semibold text-sm transition-all flex items-center justify-center gap-2 active:translate-y-0.5 shadow-sm" id="submitBtn" type="submit">
+<span>Send Message</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</button>
+<!-- Inline Success Confirmation -->
+<div class="hidden p-4 rounded-xl bg-[#f2f8e9] border border-[#65a30d]/30 text-xs font-mono text-[#4d7c0f] flex items-center gap-3" id="formSuccess">
+<svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Message dispatched cleanly. I will reply within 24 hours.</span>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- 06 FOOTER (Minimal & Memorable Signature) -->
+<footer class="py-16 bg-[#f7f7f5] transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-8 border-t structural-border pt-12">
+<!-- Brand & Title -->
+<div class="space-y-1 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-2">
+<span class="w-2 h-2 rounded-full bg-[#65a30d]"></span>
+<span class="font-display font-bold text-[#18181b]">VIPUL</span>
+<span class="text-xs font-mono text-[#71717a]">/ React Native Developer</span>
+</div>
+<p class="text-xs text-[#71717a] font-mono">
+          Designed with curiosity. Built with code.
+        </p>
+</div>
+<!-- Footer Social Links -->
+<div class="flex items-center gap-6 text-xs font-mono text-[#52525b]">
+<a class="hover:text-[#65a30d] transition-colors" href="https://github.com" rel="noreferrer" target="_blank">GitHub ↗</a>
+<a class="hover:text-[#65a30d] transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">LinkedIn ↗</a>
+<a class="hover:text-[#65a30d] transition-colors" href="mailto:vipul.reactnative@gmail.com">Email ↗</a>
+</div>
+<!-- Copyright & Stack Signature -->
+<div class="text-xs font-mono text-[#71717a] text-center md:text-right">
+<div>© 2025 Vipul. All rights reserved.</div>
+<div class="text-[10px] text-zinc-500 mt-0.5">BUILT FOR HIGH NATIVE FIDELITY</div>
+</div>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Skills Interactive Console
+    const skillChips = document.querySelectorAll('.skill-chip');
+    const skillDescBox = document.getElementById('skillDescription');
+    const defaultSkillText = "Hover over any technology chip to inspect architectural notes and implementation roles.";
+
+    skillChips.forEach(chip => {
+      chip.addEventListener('mouseenter', () => {
+        const desc = chip.getAttribute('data-desc');
+        skillDescBox.textContent = desc;
+        skillDescBox.classList.add('text-[#65a30d]');
+      });
+      chip.addEventListener('mouseleave', () => {
+        skillDescBox.textContent = defaultSkillText;
+        skillDescBox.classList.remove('text-[#65a30d]');
+      });
+    });
+
+    // Contact Form Simulation
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Transmitting...</span>';
+      
+      setTimeout(() => {
+        submitBtn.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+        contactForm.reset();
+      }, 700);
+    });
+  </script>
+</body></html>
