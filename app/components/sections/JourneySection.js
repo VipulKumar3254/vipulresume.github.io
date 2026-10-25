@@ -1,53 +1,74 @@
 import Reveal from "../Reveal";
+import JourneyStory from "../JourneyStory";
 
 const milestones = [
   {
-    phase: "PHASE 01 // FOUNDATION",
-    period: "2022 — 2023",
-    title: "Modern frontend & state orchestration",
-    description: "Built a foundation in reactive programming, TypeScript, and predictable state management with Redux Toolkit and React Navigation. Focused on reusable UI primitives and accessible ergonomics.",
-    skills: ["TypeScript", "Redux Toolkit", "REST APIs"],
+    phase: "EDUCATION",
+    period: "5 YEARS",
+    title: "BCA & MCA — DCRUST University",
+    description:
+      "Pursued both degrees at Deenbandhu Chhotu Ram University of Science and Technology (DCRUST), Murthal, Sonipat. Built a strong academic foundation while developing technical knowledge, problem-solving abilities, and a passion for software development.",
+    skills: ["BCA", "MCA", "DCRUST · Murthal"],
   },
   {
-    phase: "PHASE 02 // MOBILE ARCHITECTURE",
-    period: "2023 — 2024",
-    title: "Deep mobile architecture & offline systems",
-    description: "Moved into cross-platform development, building offline-first caching, optimistic updates, notification pipelines, and secure API flows for mobile products.",
-    skills: ["React Native", "Offline storage", "Push notifications"],
+    phase: "CAREER 01 // THINKING UNIT",
+    period: "6 MONTHS",
+    title: "Software Engineer Intern",
+    description:
+      "Joined THINKING UNIT as a Software Engineer Intern and worked on software engineering core concepts. My major role was as React Native developer- building Mobile screens, integrating api and developing the seamless user experience.  ",
+    skills: ["Internship", "Software Engineering"],
   },
   {
-    phase: "PHASE 03 // NATIVE INTEGRATIONS",
-    period: "CURRENT",
-    title: "Fabric, TurboModules & high-fidelity interaction",
-    description: "Working across native Swift and Kotlin integrations, device capabilities, and gesture systems designed to stay responsive on the UI thread.",
-    skills: ["New Architecture", "Swift / Kotlin", "Reanimated"],
+    phase: "CAREER 02 // ATTABOT SOFTWARE",
+    period: "4 MONTHS · CURRENT",
+    title: "Software Engineer",
+    description:
+      "Working as a Software Engineer at ATTABOT SOFTWARE, developing cross-platform mobile applications using React Native.Building reusable UI components and integrating REST APIs to deliver seamless user experiences.Managing application state, navigation, authentication, and push notifications.Debugging issues and optimizing application performance while maintaining clean, scalable code.",
+    skills: ["Current role", "Software Engineering"],
   },
 ];
 
 export default function JourneySection() {
   return (
-    <section className="section container section-bordered" id="journey" aria-labelledby="journey-title">
+    <section
+      className="section container section-bordered"
+      id="journey"
+      aria-labelledby="journey-title"
+    >
       <div className="journey-layout">
         <Reveal className="section-intro">
-          <span className="section-kicker">01 / EVOLUTION</span>
-          <h2 className="section-title" id="journey-title">The journey so far.</h2>
-          <p>From foundational JavaScript interfaces to considered React Native apps that run smoothly across iOS and Android.</p>
-          <p>I focus on native architecture, clear boundaries between threads, and reusable systems that let teams move quickly without losing the details.</p>
-          <div className="stats-row">
-            <div className="stat"><strong>2+</strong><span>Years building</span></div>
-            <div className="stat"><strong>10+</strong><span>Shipped apps</span></div>
-            <div className="stat"><strong>∞</strong><span>Still exploring</span></div>
-          </div>
+          <span className="section-kicker">
+            01 / EDUCATION &amp; EXPERIENCE
+          </span>
+          <h2 className="section-title" id="journey-title">
+            The journey so far.
+          </h2>
+          <JourneyStory />
         </Reveal>
         <div className="timeline">
           {milestones.map((item, index) => (
-            <Reveal className="timeline-item" key={item.phase} delay={index * 100}>
-              <span className={`timeline-marker ${index === milestones.length - 1 ? "timeline-marker-current" : ""}`} />
+            <Reveal
+              className="timeline-item"
+              key={item.phase}
+              delay={index * 100}
+            >
+              <span
+                className={`timeline-marker ${index === milestones.length - 1 ? "timeline-marker-current" : ""}`}
+              />
               <article className="timeline-card">
-                <div className="timeline-meta"><span>{item.phase}</span><time>{item.period}</time></div>
+                <div className="timeline-meta">
+                  <span>{item.phase}</span>
+                  <time>{item.period}</time>
+                </div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                <div className="tag-list">{item.skills.map((skill) => <span className="tag" key={skill}>{skill}</span>)}</div>
+                <div className="tag-list">
+                  {item.skills.map((skill) => (
+                    <span className="tag" key={skill}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </article>
             </Reveal>
           ))}

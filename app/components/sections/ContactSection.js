@@ -55,7 +55,7 @@ export default function ContactSection() {
           <h2 className="section-title" id="contact-title">Let’s build something useful.</h2>
           <p>I’m interested in thoughtful products, ambitious ideas, and opportunities to build useful experiences for iOS and Android.</p>
           <div className="contact-details">
-            <div><span className="mono-label">DIRECT INQUIRY</span><a href="mailto:vipul.reactnative@gmail.com">vipul.reactnative@gmail.com</a></div>
+            <div><span className="mono-label">DIRECT INQUIRY</span><a href="mailto:vipulkumar3254@gmail.com">vipulkumar3254@gmail.com</a></div>
             <div><span className="mono-label">AVAILABILITY</span><strong>Available for select engagements</strong></div>
             <div><span className="mono-label">RESPONSE TIME</span><span>Within one business day</span></div>
           </div>
@@ -76,7 +76,7 @@ export default function ContactSection() {
             {status === "sending" ? "Sending message…" : status === "sent" ? "Message sent" : "Send message"}<span aria-hidden="true">↗</span>
           </button>
           {status === "sent" && <p className="form-note form-success" role="status">Your message was saved. Thank you — Vipul will be in touch.</p>}
-          {status === "error" && <p className="form-note form-error" role="alert">{errorMessage} <a href="mailto:vipul.reactnative@gmail.com">Email directly</a>.</p>}
+          {status === "error" && <p className="form-note form-error" role="alert">{errorMessage} <a href="mailto:vipulkumar3254@gmail.com">Email directly</a>.</p>}
         </Reveal>
       </div>
     </section>

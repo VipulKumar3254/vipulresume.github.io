@@ -33,7 +33,6 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <span className="availability"><span className="status-dot" />Open for select contracts</span>
           <ThemeToggle />
           <button
             className="icon-button menu-toggle"

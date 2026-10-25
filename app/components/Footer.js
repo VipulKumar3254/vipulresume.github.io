@@ -7,11 +7,11 @@ export default function Footer() {
           <p>Designed with curiosity. Built with code.</p>
         </div>
         <nav className="footer-links" aria-label="Social links">
-          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          <a href="mailto:vipul.reactnative@gmail.com">Email ↗</a>
+          <a href="https://github.com/VipulKumar3254" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/vipul-kumar-085a49244/?isSelfProfile=true" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="mailto:vipulkumar3254@gmail.com">Email ↗</a>
         </nav>
-        <div className="footer-note"><span>© {new Date().getFullYear()} Vipul</span><span>Built for mobile craft</span></div>
+        <div className="footer-note"><span>© {new Date().getFullYear()} Vipul</span><span>Built By Vipul kumar</span></div>
       </div>
     </footer>
   );

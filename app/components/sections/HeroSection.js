@@ -22,14 +22,14 @@ export default function HeroSection() {
             View my work <span className="arrow-down" aria-hidden="true">↘</span>
           </a>
           <div className="social-links" aria-label="Social profiles">
-            <a className="icon-button" href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub profile">GH</a>
-            <a className="icon-button" href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">in</a>
+            <a className="icon-button" href="https://github.com/VipulKumar3254" target="_blank" rel="noreferrer" aria-label="GitHub profile">GH</a>
+            <a className="icon-button" href="https://www.linkedin.com/in/vipul-kumar-085a49244/?isSelfProfile=true" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">in</a>
           </div>
         </Reveal>
         <Reveal className="hero-metrics" delay={300}>
-          <div><span className="mono-label">FRAME BUDGET</span><strong>60 / 120 FPS</strong></div>
+          <div><span className="mono-label">CORE FOCUS</span><strong>iOS &amp; Android apps</strong></div>
           <div><span className="mono-label">ECOSYSTEM</span><strong>Fabric &amp; JSI</strong></div>
-          <div><span className="mono-label">LOCATION</span><strong>San Francisco, CA</strong></div>
+          <div><span className="mono-label">LOCATION</span><strong>Sonipat, Haryana</strong></div>
         </Reveal>
       </div>
 
@@ -37,7 +37,7 @@ export default function HeroSection() {
         <div className="portrait-frame">
           <div className="portrait-image-wrap">
             <Image
-              src="/images/vipul-portrait.jpg"
+              src="/images/vipul-portrait.png"
               alt="Vipul, React Native developer"
               fill
               priority
